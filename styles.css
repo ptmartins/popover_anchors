@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+[popover] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	inset: auto;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	padding: 4.5rem;
+}
+
+ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+input::-webkit-slider-thumb {
+	anchor-name: --thumb;
+}
+  
+output {
+	position-anchor: --thumb;
+	position: absolute;
+	left: anchor(center);
+	bottom: anchor(top);
+	transform: translateX(-50%);
+	position-try-fallbacks: --top-to-bottom;
+}
+
+.slider,
+.tooltipTest {
+	margin-block-end: 5rem;;
+}
+
+.iwTooltipLink {
+	cursor: pointer;
+	font-weight: 700;
+	position: relative;
+}
+
+.iwTooltip {
+    font-size: 13px;
+    font-weight: 400;
+    border: 0;
+    bottom: anchor(top);
+    left: anchor(center);
+    background-color: #333;
+    color: #fff;
+    padding: .375rem .75rem;
+    border-radius: 12px;
+    white-space: nowrap;
+	position: absolute;
+	position-try-fallbacks: --top-to-bottom;
+}
+
+.contextMenuTest {
+	display: flex;
+	justify-content: center;
+}
+
+.iwContextMenuBtn {
+	anchor-name: --contextMenuBtn;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	user-select: none;
+	margin-inline-start: 30rem;
+}
+
+.iwContextMenu {
+	border: 1px solid #a0a0a0;
+	border-radius: 5px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	padding: .375rem;
+	position: absolute;
+	position-anchor: --contextMenuBtn;
+	top: anchor(bottom);
+	left: anchor(right);
+	position-try-fallbacks: --ctx-left-to-right;
+	min-width: 250px;
+
+	li {
+		padding-block: .375rem;
+	}
+
+	a {
+		border-radius: 5px;
+		color: #333;
+		text-decoration: none;
+		display: block;
+		padding: .375rem .75rem;
+
+		&:hover {
+			background-color: #5b9aff;
+			color: #fff;
+		}
+	}
+}
+
+@position-try --top-to-bottom {
+	bottom: unset;
+	top: anchor(bottom);
+	left: anchor(center);
+}
+
+@position-try --ctx-left-to-right {
+	left: unset;
+	top: anchor(bottom);
+	right: anchor(left);
+}
