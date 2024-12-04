@@ -1,1 +1,1 @@
-# Popover API and amchor positioning
+# Popover API and anchor positioning
